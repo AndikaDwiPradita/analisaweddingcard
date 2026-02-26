@@ -57,7 +57,7 @@ body {
 
 .nav-links a:hover {
   color: white;
-  text-shadow: 0 10px;
+  text-shadow: 0 0 5px, 0 0 10px, 0 0 20px, 0 0 40px;
 }
 
 /* Catalog */
