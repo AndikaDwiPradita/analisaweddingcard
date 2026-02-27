@@ -24,15 +24,38 @@ function playMusic() {
       });
   }
 }
+// Intersection Observer untuk animasi scroll
+function initScrollAnimation() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show'); // kalau mau hilang saat scroll ke atas
+      }
+    });
+  }, {
+    threshold: 0.2, // 20% elemen terlihat baru muncul
+    rootMargin: '0px'
+  });
 
-// Cover: klik buka undangan
+  // Ambil semua elemen yang mau dianimasi
+  const animatedElements = document.querySelectorAll('.fade-up, .zoom-in, .slide-left');
+  animatedElements.forEach(el => observer.observe(el));
+}
+
+// Panggil setelah cover dibuka
 document.getElementById('open-invitation').addEventListener('click', function() {
   document.getElementById('cover').classList.add('hidden');
   document.getElementById('main-content').style.display = 'block';
   
-  // Mulai musik setelah cover dibuka
+  // Mulai musik
   playMusic();
+  
+  // Inisialisasi animasi
+  setTimeout(initScrollAnimation, 500); // kasih jeda
 });
+
 
 // Tombol toggle play/pause
 musicToggle.addEventListener('click', function() {

@@ -7,95 +7,12 @@
     
     <!-- CSS External -->
     <link rel="stylesheet" href="style.css">
-    <!-- CSS Animation -->
-     <style>
-      /* ===== ANIMASI INTERSECTION OBSERVER ===== */
-/* Dasar: semua elemen dengan class animasi dimulai dengan opacity 0 dan transform tersembunyi */
-[class*="animate-"] {
-  opacity: 0;
-  transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.3, 1), transform 0.8s cubic-bezier(0.2, 0.9, 0.3, 1);
-}
-
-/* Saat elemen terlihat (class 'show' ditambahkan oleh JS) */
-[class*="animate-"].show {
-  opacity: 1;
-  transform: none !important; /* reset transform */
-}
-
-/* ===== VARIAN ANIMASI ===== */
-.animate-fade-up {
-  transform: translateY(40px);
-}
-
-.animate-fade-down {
-  transform: translateY(-40px);
-}
-
-.animate-fade-left {
-  transform: translateX(-40px);
-}
-
-.animate-fade-right {
-  transform: translateX(40px);
-}
-
-.animate-zoom-in {
-  transform: scale(0.8);
-}
-
-.animate-zoom-out {
-  transform: scale(1.2);
-}
-
-.animate-slide-up {
-  transform: translateY(100%);
-}
-
-.animate-slide-down {
-  transform: translateY(-100%);
-}
-
-.animate-slide-left {
-  transform: translateX(-100%);
-}
-
-.animate-slide-right {
-  transform: translateX(100%);
-}
-
-.animate-flip-left {
-  transform: perspective(400px) rotateY(90deg);
-  transform-origin: left;
-}
-
-.animate-flip-right {
-  transform: perspective(400px) rotateY(-90deg);
-  transform-origin: right;
-}
-
-.animate-flip-up {
-  transform: perspective(400px) rotateX(-90deg);
-  transform-origin: top;
-}
-
-.animate-flip-down {
-  transform: perspective(400px) rotateX(90deg);
-  transform-origin: bottom;
-}
-
-/* ===== DELAY (opsional) ===== */
-.delay-100 { transition-delay: 0.1s; }
-.delay-200 { transition-delay: 0.2s; }
-.delay-300 { transition-delay: 0.3s; }
-.delay-400 { transition-delay: 0.4s; }
-.delay-500 { transition-delay: 0.5s; }
-     </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-
-
 <body>
-  <section class="cover " id="cover">
-      <div class="WCover" id="hidden">
+  <section>
+    <div class="container">
+      <div class="cover" id="cover">
         <h1 class="CT">Undangan Pernikahan</h1>
         <h3 class="CNT">Robby & Wati</h3>
         <p class="date">Kamis 19 Februari 2027</p>
@@ -105,11 +22,12 @@
         <h1 class="OG" id="open-invitation">Buka Undangan</h1>
         <h5 class="instruksi">klik tombol di atas untuk membuka undangan</h5>
       </div>
+    </div>
   </section>
   
   <main class="main-content" id="main-content">
     <section class="welcome">
-      <div class="WContain animate-fade-up delay-100">
+      <div class="WContain fade-up delay-100">
         <h3 class="WT-1">Welcome To</h3>
         <h1 class="WT-2">The Wedding OF</h1>
         <img src="images/couple-img.png" class="cpl-img">
@@ -120,17 +38,17 @@
     
     <!-- Section Kedua Mempelai -->
     <section class="couple-section" id="couple">
-      <div class="container ">
+      <div class="container">
         <h2 class="section-title">Mempelai</h2>
         <div class="couple-wrapper">
           <!-- Pria -->
-          <div class="couple-card animate-fade-right delay-300">
+          <div class="couple-card">
             <img src="images/couple-img.png" alt="Robby" class="couple-photo">
             <h3 class="couple-name">Robby</h3>
             <p class="couple-desc">Putra dari Bapak Ahmad & Ibu Siti</p>
           </div>
           <!-- Wanita -->
-          <div class="couple-card animate-fade-left delay-300">
+          <div class="couple-card">
             <img src="images/couple-img.png" alt="Wati" class="couple-photo">
             <h3 class="couple-name">Wati</h3>
             <p class="couple-desc">Putri dari Bapak Budi & Ibu Dewi</p>
@@ -145,7 +63,7 @@
         <h2 class="section-title">Acara Pernikahan</h2>
         <div class="event-wrapper">
           <!-- Akad Nikah -->
-          <div class="event-card animate-fade-right delay-300">
+          <div class="event-card">
             <div class="event-icon">📿</div>
             <h3 class="event-name">Akad Nikah</h3>
             <p class="event-date">Kamis, 19 Februari 2027</p>
@@ -155,7 +73,7 @@
             <a href="https://maps.app.goo.gl/..." target="_blank" class="map-link">📍 Lihat Peta</a>
           </div>
           <!-- Resepsi -->
-          <div class="event-card animate-fade-left delay-300">
+          <div class="event-card">
             <div class="event-icon">🍽️</div>
             <h3 class="event-name">Resepsi</h3>
             <p class="event-date">Kamis, 19 Februari 2027</p>
@@ -169,7 +87,7 @@
     </section>
     
         <!-- Section Countdown -->
-    <section class="countdown-section animate-fade-down delay-300" id="countdown">
+    <section class="countdown-section" id="countdown">
       <div class="container">
         <h2 class="section-title">Menuju Hari Bahagia</h2>
         <div class="countdown-wrapper">
@@ -195,7 +113,7 @@
     </section>
     
         <!-- Section Galeri Foto -->
-    <section class="gallery-section animate-fade-down delay-300" id="gallery">
+    <section class="gallery-section" id="gallery">
       <div class="container">
         <h2 class="section-title">Galeri Foto</h2>
         <div class="gallery-grid">
@@ -228,7 +146,7 @@
     </section>
     
         <!-- Section Love Story -->
-    <section class="lovestory-section animate-fade-left delay-300" id="lovestory">
+    <section class="lovestory-section" id="lovestory">
       <div class="container">
         <h2 class="section-title">Love Story</h2>
         <div class="timeline">
@@ -261,7 +179,7 @@
     </section>
     
         <!-- Section Wedding Gift -->
-    <section class="gift-section animate-fade-right delay-300" id="gift">
+    <section class="gift-section" id="gift">
       <div class="container">
         <h2 class="section-title">Wedding Gift</h2>
         <p class="gift-intro">Doa restu Anda adalah hadiah terbaik. Namun jika ingin memberi tanda kasih, dapat melalui:</p>
@@ -270,7 +188,7 @@
         <h3 class="gift-subtitle">🏦 Transfer Bank</h3>
         <div class="gift-grid">
           <!-- BRI -->
-          <div class="gift-card animate-fade-left delay-300">
+          <div class="gift-card">
             <div class="gift-icon">🏧</div>
             <h4 class="gift-name">Bank BRI</h4>
             <p class="gift-account">1234-5678-9012-3456</p>
@@ -278,7 +196,7 @@
             <button class="copy-btn" data-account="1234567890123456">📋 Salin</button>
           </div>
           <!-- Mandiri -->
-          <div class="gift-card animate-fade-right delay-300">
+          <div class="gift-card">
             <div class="gift-icon">🏦</div>
             <h4 class="gift-name">Bank Mandiri</h4>
             <p class="gift-account">9876-5432-1098-7654</p>
@@ -286,7 +204,7 @@
             <button class="copy-btn" data-account="9876543210987654">📋 Salin</button>
           </div>
           <!-- BCA (opsional) -->
-          <div class="gift-card animate-fade-left delay-300">
+          <div class="gift-card">
             <div class="gift-icon">💳</div>
             <h4 class="gift-name">Bank BCA</h4>
             <p class="gift-account">1122-3344-5566-7788</p>
@@ -299,7 +217,7 @@
         <h3 class="gift-subtitle">📱 E-Wallet</h3>
         <div class="gift-grid">
           <!-- DANA -->
-          <div class="gift-card animate-fade-right delay-300">
+          <div class="gift-card">
             <div class="gift-icon">📲</div>
             <h4 class="gift-name">DANA</h4>
             <p class="gift-account">0812-3456-7890</p>
@@ -307,7 +225,7 @@
             <button class="copy-btn" data-account="081234567890">📋 Salin</button>
           </div>
           <!-- GoPay -->
-          <div class="gift-card animate-fade-left delay-300">
+          <div class="gift-card">
             <div class="gift-icon">🦍</div>
             <h4 class="gift-name">GoPay</h4>
             <p class="gift-account">0812-3456-7890</p>
@@ -315,7 +233,7 @@
             <button class="copy-btn" data-account="081234567890">📋 Salin</button>
           </div>
           <!-- OVO -->
-          <div class="gift-card animate-fade-right delay-300">
+          <div class="gift-card">
             <div class="gift-icon">🟣</div>
             <h4 class="gift-name">OVO</h4>
             <p class="gift-account">0812-3456-7890</p>
@@ -327,19 +245,19 @@
     </section>
     
         <!-- Section Ucapan & Doa -->
-    <section class="wishes-section animate-fade-down delay-300" id="wishes">
+    <section class="wishes-section" id="wishes">
       <div class="container">
         <h2 class="section-title">Ucapan & Doa</h2>
         
         <!-- Form Ucapan -->
-        <form id="wishForm" class="wish-form animate-fade-right delay-300">
+        <form id="wishForm" class="wish-form">
           <input type="text" id="wishName" placeholder="Nama Anda" required>
           <textarea id="wishMessage" placeholder="Tulis ucapan dan doa..." rows="4" required></textarea>
           <button type="submit" class="submit-btn">Kirim Ucapan</button>
         </form>
         
         <!-- Daftar Ucapan -->
-        <div class="wish-list animate-fade-left delay-300" id="wishList">
+        <div class="wish-list" id="wishList">
           <h3 class="wish-list-title">💌 Ucapan yang telah masuk</h3>
           <div id="wishesContainer"></div>
         </div>
