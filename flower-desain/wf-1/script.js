@@ -24,41 +24,37 @@ function playMusic() {
       });
   }
 }
-// ===== INTERSECTION OBSERVER UNTUK ANIMASI =====
+// Intersection Observer untuk animasi scroll
 function initScrollAnimation() {
-  // Daftar elemen yang akan dianimasi (semua dengan class animate-*)
-  const animatedElements = document.querySelectorAll('[class*="animate-"]');
-  
-  if (animatedElements.length === 0) return;
-
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Tambah class 'show' saat elemen masuk viewport
         entry.target.classList.add('show');
       } else {
-        // Hapus class 'show' saat elemen keluar (agar animasi muncul lagi saat scroll balik)
-        entry.target.classList.remove('show');
+        entry.target.classList.remove('show'); // kalau mau hilang saat scroll ke atas
       }
     });
   }, {
-    threshold: 0.2, // 20% elemen terlihat baru dianggap masuk
+    threshold: 0.2, // 20% elemen terlihat baru muncul
     rootMargin: '0px'
   });
 
-  // Observasi semua elemen
+  // Ambil semua elemen yang mau dianimasi
+  const animatedElements = document.querySelectorAll('.fade-up, .zoom-in, .slide-left');
   animatedElements.forEach(el => observer.observe(el));
 }
 
+// Panggil setelah cover dibuka
 document.getElementById('open-invitation').addEventListener('click', function() {
-  document.getElementById('cover').style.display = 'none';          // <-- ubah ini
+  document.getElementById('cover').classList.add('hidden');
   document.getElementById('main-content').style.display = 'block';
+  
+  // Mulai musik
   playMusic();
-  setTimeout(initScrollAnimation, 500);
+  
+  // Inisialisasi animasi
+  setTimeout(initScrollAnimation, 500); // kasih jeda
 });
-
-
-// Jika belum, pastikan untuk menambahkan baris di atas di tempat yang sesuai.
 
 
 // Tombol toggle play/pause
@@ -78,7 +74,7 @@ musicToggle.addEventListener('click', function() {
 });
 
 
-// Countdown
+// Countdown menuju 19 Februari 2026
 function updateCountdown() {
   const eventDate = new Date('February 19, 2027 08:00:00').getTime(); // sesuaikan jam jika perlu
   const now = new Date().getTime();
