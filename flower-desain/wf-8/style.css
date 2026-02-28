@@ -28,13 +28,18 @@ body {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: url('images/welcome.png');
+}
+
+.WCover {
+  width: 100%;
+  height: 100vh;
+  background: url('images/cover.png');
   background-position: center;
   background-size: cover;
-  border: 1px solid transparent;
 }
 
 .CT {
+  padding-top: 50%;
   text-align: center;
   font-size: 2.5rem;
 }
@@ -84,13 +89,11 @@ body {
   background: url('images/welcome.png');
   background-position: center;
   background-size: cover;
-  border: 1px solid transparent;
-  
 }
 
 .WContain {
   position: absolute;
-  background-color: rgba(128, 128, 128, 0.8);
+  background: rgba(255, 240, 245, 0.85);
   border-radius: 50px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   color: black;
@@ -105,7 +108,7 @@ body {
   font-size: 1.8rem;
 }
 .WT-2 {
-  font-size: 2.3rem;
+  font-size: 2.5rem;
 }
 .CNT {
   font-size: 2.2rem;
@@ -142,6 +145,10 @@ body {
 
 .music-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.music-btn.playing {
+  /* bisa ubah ikon atau warna */
 }
 
 .CKM {
@@ -217,7 +224,7 @@ body {
 
 .couple-desc {
   font-size: 1.1rem;
-  color: black;
+  color: #black;
   margin-bottom: 10px;
   line-height: 1.6;
 }
@@ -327,7 +334,7 @@ body {
 }
 
 .map-link:hover {
-  background: grey;
+  background: thistle;
 }
 
 /* Responsif */
@@ -346,7 +353,7 @@ body {
 /* Section Countdown */
 .countdown-section {
   padding: 60px 20px;
-  background: grey;
+  background: thistle;
   text-align: center;
   min-height: 40vh;
   display: flex;
@@ -373,7 +380,7 @@ body {
   padding: 20px;
   min-width: 120px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  border: 2px solid grey;
+  border: 2px solid thistle;
 }
 
 .countdown-number {
@@ -599,7 +606,7 @@ body {
 
 /* Gift Section */
 .gift-section {
-  background-color: rgba(128, 128, 128, 0.5);
+  background: rgba(255, 240, 245, 0.85);
   padding: 60px 20px;
   text-align: center;
   min-height: 100vh;
@@ -696,7 +703,7 @@ body {
 }
 
 .copy-btn:hover {
-  background: #9e5a63;
+  background: black;
 }
 
 .copy-btn.copied {
@@ -821,7 +828,7 @@ body {
 
 /* Footer */
 .footer {
-  background: grey;
+  background: thistle;
   color: black;
   text-align: center;
   padding: 50px 20px 30px;
@@ -875,4 +882,3 @@ body {
     font-size: 1.8rem;
   }
 }
-
