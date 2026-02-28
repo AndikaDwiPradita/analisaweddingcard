@@ -32,6 +32,7 @@ document.getElementById('open-invitation').addEventListener('click', function() 
   playMusic();
 });
 
+
 // Tombol toggle play/pause
 musicToggle.addEventListener('click', function() {
   if (isPlaying) {
