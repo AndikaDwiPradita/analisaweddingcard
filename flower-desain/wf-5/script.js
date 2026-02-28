@@ -27,12 +27,11 @@ function playMusic() {
 
 // Cover: klik buka undangan
 document.getElementById('open-invitation').addEventListener('click', function() {
-  document.getElementById('cover').classList.add('hidden');
+  document.getElementById('cover').style.display = 'none';          // <-- ubah ini
   document.getElementById('main-content').style.display = 'block';
-  
-  // Mulai musik setelah cover dibuka
   playMusic();
 });
+
 
 // Tombol toggle play/pause
 musicToggle.addEventListener('click', function() {
