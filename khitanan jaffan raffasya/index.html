@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Khitanan - Jaffan Raffasya</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+
+  <!-- ===== COVER ===== -->
+  <section class="cover" id="cover">
+    <div class="WCover">
+      <h1 class="CT">Undangan Khitanan</h1>
+      <h3 class="CNT">JAFFAN RAFFASYA</h3>
+      <p class="date">Minggu, 4 Oktober 2026</p>
+      <h5 class="yth">Kepada YTH Bapak/Ibu/Saudara/i</h5>
+      <h1 class="OG" id="open-invitation">Buka Undangan</h1>
+      <h5 class="instruksi">Klik tombol di atas untuk membuka undangan</h5>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-content" id="main-content">
+
+    <!-- Welcome -->
+    <section class="welcome">
+      <div class="WContain" data-animate="fade-up">
+        <h3 class="WT-1">Welcome To</h3>
+        <h1 class="WT-2">Walimatul Khitan</h1>
+        <img src="images/couple-img.png" class="cpl-img" alt="Jaffan">
+        <h1 class="CNT">JAFFAN RAFFASYA</h1>
+        <p class="date">Minggu, 4 Oktober 2026</p>
+      </div>
+    </section>
+
+    <!-- Profil Anak -->
+    <section class="couple-section" id="couple">
+      <div class="container">
+        <h2 class="section-title" data-animate="zoom-in">Walimatul Khitan</h2>
+        <div class="couple-wrapper">
+          <div class="couple-card" data-animate="fade-up">
+            <img src="images/couple-img.png" alt="Jaffan Raffasya" class="couple-photo">
+            <h3 class="couple-name">JAFFAN RAFFASYA</h3>
+            <p class="couple-desc">Putra Ke-2 dari Bapak Didik Pamungkas dan Ibu Aliyah</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="countdown-section" id="countdown">
+      <div class="container">
+        <h2 class="section-title" data-animate="zoom-in">Menuju Hari Bahagia</h2>
+        <div class="countdown-wrapper">
+          <div class="countdown-item" data-animate="fade-up" data-delay="100">
+            <span class="countdown-number" id="days">00</span>
+            <span class="countdown-label">Hari</span>
+          </div>
+          <div class="countdown-item" data-animate="fade-up" data-delay="200">
+            <span class="countdown-number" id="hours">00</span>
+            <span class="countdown-label">Jam</span>
+          </div>
+          <div class="countdown-item" data-animate="fade-up" data-delay="300">
+            <span class="countdown-number" id="minutes">00</span>
+            <span class="countdown-label">Menit</span>
+          </div>
+          <div class="countdown-item" data-animate="fade-up" data-delay="400">
+            <span class="countdown-number" id="seconds">00</span>
+            <span class="countdown-label">Detik</span>
+          </div>
+        </div>
+        <p class="countdown-date">Minggu, 4 Oktober 2026</p>
+      </div>
+    </section>
+
+    <!-- Turut Mengundang -->
+    <section class="guest-section" id="guest">
+      <div class="container">
+        <h2 class="section-title" data-animate="zoom-in">Turut Mengundang</h2>
+        <div class="guest-list-container" data-animate="fade-up">
+          <div class="guest-category">
+            <ul class="guest-list">
+              <li class="guest-item">Bpk. Deni Setiabudi / Jaro Edo (Kepala Desa Pangradin)</li>
+              <li class="guest-item">Bpk. Soni (Kadus 2)</li>
+              <li class="guest-item">Bpk. Sarta (Ketua RW.06)</li>
+              <li class="guest-item">Bpk. Nursin (Ketua RT.03)</li>
+              <li class="guest-item">Bpk. Baron (Ketua Pemuda)</li>
+              <li class="guest-item">Bpk. Jalu (Ketua AREMBA)</li>
+              <li class="guest-item">Bpk. Kiyai Apo Saproni (Sesepuh Sipayung)</li>
+              <li class="guest-item">Juri (Adinda)</li>
+              <li class="guest-item">Erlin (Kakanda)</li>
+              <li class="guest-item">Muri (Kakanda)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ucapan & Doa -->
+    <section class="wishes-section" id="wishes">
+      <div class="container">
+        <h2 class="section-title" data-animate="zoom-in">Ucapan & Doa</h2>
+
+        <form id="wishForm" class="wish-form" data-animate="fade-up">
+          <input type="text" id="wishName" placeholder="Nama Anda" required>
+          <textarea id="wishMessage" placeholder="Tulis ucapan dan doa..." rows="4" required></textarea>
+          <button type="submit" class="submit-btn">Kirim Ucapan</button>
+        </form>
+
+        <div class="wish-list" id="wishList" data-animate="fade-up">
+          <h3 class="wish-list-title">💌 Ucapan yang telah masuk</h3>
+          <div id="wishesContainer"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-quote" data-animate="fade-up">"Ya Tuhan kami, anugerahkanlah kepada kami pasangan kami dan keturunan kami sebagai penyejuk hati kami, dan jadikanlah kami pemimpin bagi orang-orang yang bertakwa.” (QS. Al-Furqan: 74)</p>
+        <p class="footer-thanks" data-animate="fade-up">Terima kasih atas doa dan ucapan Anda</p>
+        <p class="footer-couple" data-animate="zoom-in">JAFFAN RAFFASYA</p>
+        <p class="footer-copyright">&copy; 2026. All Copyright reserved.</p>
+        <p class="footer-copyright">CREATED BY analisaweddingcard.netlify.app</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ===== AUDIO & TOMBOL ===== -->
+  <audio id="backsound" loop preload="auto">
+    <source src="music/wedding-song.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung tag audio.
+  </audio>
+  <button id="music-toggle" class="music-btn">🔈</button>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</body>
+</html>
