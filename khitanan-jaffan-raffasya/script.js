@@ -132,3 +132,27 @@ document.getElementById('open-invitation').addEventListener('click', function() 
   // Mulai animasi setelah konten muncul
   setTimeout(initScrollAnimation, 500);
 });
+
+// ===== SALIN ALAMAT KE CLIPBOARD =====
+const copyLocBtn = document.querySelector('.btn-copy-loc');
+
+if (copyLocBtn) {
+  copyLocBtn.addEventListener('click', function() {
+    const alamat = this.getAttribute('data-location');
+
+    navigator.clipboard.writeText(alamat)
+      .then(() => {
+        const originalText = this.textContent;
+        this.textContent = 'Alamat Tersalin!';
+        this.classList.add('copied');
+
+        setTimeout(() => {
+          this.textContent = originalText;
+          this.classList.remove('copied');
+        }, 2000);
+      })
+      .catch(() => {
+        alert('Gagal menyalin. Silakan salin manual:\n\n' + alamat);
+      });
+  });
+}
