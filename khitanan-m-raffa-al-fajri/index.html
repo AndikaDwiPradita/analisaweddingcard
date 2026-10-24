@@ -3,53 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan Khitanan</title>
-    
-    <!-- CSS External -->
+    <title>Undangan Khitanan - M. Raffa Al-Fajri</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="cover" id="cover">
-      <div class="WCover" data-animate="zoom-out">
-      
-        <div class="TCover">
-          <h1 class="CT">Undangan Khitanan</h1>
-          <h3 class="CNT">M. Raffa Al-Fajri</h3>
-          <p class="date">Rabu, 4 November 2026</p>
-          <h5 class="yth">Kepada YTH Bapak/Ibu/Saudara/i</h5>
-          <h1 class="OG" id="open-invitation">Buka Undangan</h1>
-          <h5 class="instruksi">klik tombol di atas untuk membuka undangan</h5>
-        </div>
+
+  <!-- ===== COVER ===== -->
+  <section class="cover" id="cover">
+    <div class="WCover" data-animate="zoom-out">
+      <div class="TCover">
+        <h1 class="CT">Undangan Khitanan</h1>
+        <h3 class="CNT">M. Raffa Al-Fajri</h3>
+        <p class="date">Rabu, 4 November 2026</p>
+        <h5 class="yth">Kepada YTH Bapak/Ibu/Saudara/i</h5>
+        <h1 class="OG" id="open-invitation">Buka Undangan</h1>
+        <h5 class="instruksi">Klik tombol di atas untuk membuka undangan</h5>
       </div>
-    </section>
-  
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
   <main class="main-content" id="main-content">
+
     <!-- Welcome Section -->
     <section class="welcome">
       <div class="WContain" data-animate="fade-up">
         <h3 class="WT-1">Welcome To</h3>
         <h1 class="WT-2">Walimatul Khitan</h1>
-        <img src="images/couple-img.png" class="cpl-img">
+        <img src="images/couple-img.png" class="cpl-img" alt="M. Raffa Al-Fajri">
         <h1 class="CNT">M. Raffa Al-Fajri</h1>
         <p class="date">Rabu, 4 November 2026</p>
       </div>
     </section>
-    
-    <!-- Section Kedua Mempelai -->
+
+    <!-- Section Profil Anak -->
     <section class="couple-section" id="couple">
       <div class="container">
         <h2 class="section-title" data-animate="zoom-in">Walimatul Khitan</h2>
         <div class="couple-wrapper">
-          <!-- Pria -->
-          <div class="couple-card" data-animate="fade-left">
-            <img src="images/couple-img.png" alt="Robby" class="couple-photo">
+          <div class="couple-card" data-animate="fade-up">
+            <img src="images/couple-img.png" alt="M. Raffa Al-Fajri" class="couple-photo">
             <h3 class="couple-name">M. Raffa Al-Fajri</h3>
             <p class="couple-desc">Putra pertama Bpk. Salman Fajri, S.Pd & Ibu Mellawaty Utami, S.Pd</p>
           </div>
         </div>
       </div>
     </section>
-    
+
     <!-- Section Countdown -->
     <section class="countdown-section" id="countdown">
       <div class="container">
@@ -75,47 +75,46 @@
         <p class="countdown-date">Rabu, 4 November 2026</p>
       </div>
     </section>
-    
-        <div class="guest-list-container" data-animate="fafe-left">
-        <!-- Keluarga Besar -->
-        <div class="guest-category">
-            <h3 class="category-title">Turut Mengundang</h3>
-            <ul class="guest-list">
-                <li class="guest-item">Esa Asmarini, A.Mk (Kepala Desa Setu)</li>
-                <li class="guest-item">Emi Munaimah, S.Pd., M.M</li>
-                <li class="guest-item">Umar S.Pd., M.M</li>
-                <li class="guest-item">Popoh Patonah, S.Pd.SD (Kepala SDN Sukamanah 04)</li>
-                <li class="guest-item">Iis Islamiyah, S.Pd (Kepala SDN Jasinga 04)</li>
-                <li class="guest-item">Astuti Adawiyah, S.Pd (Kepala SDN Cidokom - Gunung Sindur)</li>
-                <li class="guest-item">Mumu Suharma, S.Pd., M.M (Kakek)</li>
-                <li class="guest-item">Dan Segenap Keluarga</li>
-            </ul>
-        </div>
-    
-    <!-- Section Ucapan & Doa -->
-    <section class="wishes-section" id="wishes">
+
+    <!-- Section Turut Mengundang -->
+    <section class="guest-section" id="guest">
       <div class="container">
-        <h2 class="section-title" data-animate="zoom-in">Ucapan & Doa</h2>
-        
-        <!-- Form Ucapan -->
-        <form id="wishForm" class="wish-form" data-animate="fade-up">
-          <input type="text" id="wishName" placeholder="Nama Anda" required>
-          <textarea id="wishMessage" placeholder="Tulis ucapan dan doa..." rows="4" required></textarea>
-          <button type="submit" class="submit-btn">Kirim Ucapan</button>
-        </form>
-        
-        <!-- Daftar Ucapan -->
-        <div class="wish-list" id="wishList" data-animate="fade-up">
-          <h3 class="wish-list-title">💌 Ucapan yang telah masuk</h3>
-          <div id="wishesContainer"></div>
+        <h2 class="section-title" data-animate="zoom-in">Turut Mengundang</h2>
+        <div class="guest-list-container" data-animate="fade-left">
+          <div class="guest-category">
+            <h3 class="category-title">Keluarga & Kerabat</h3>
+            <ul class="guest-list">
+              <li class="guest-item">Esa Asmarini, A.Mk (Kepala Desa Setu)</li>
+              <li class="guest-item">Emi Munaimah, S.Pd., M.M</li>
+              <li class="guest-item">Umar S.Pd., M.M</li>
+              <li class="guest-item">Popoh Patonah, S.Pd.SD (Kepala SDN Sukamanah 04)</li>
+              <li class="guest-item">Iis Islamiyah, S.Pd (Kepala SDN Jasinga 04)</li>
+              <li class="guest-item">Astuti Adawiyah, S.Pd (Kepala SDN Cidokom - Gunung Sindur)</li>
+              <li class="guest-item">Mumu Suharma, S.Pd., M.M (Kakek)</li>
+              <li class="guest-item">Dan Segenap Keluarga</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
-    
-    <!-- Footer / Penutup -->
+
+    <!-- Section Kami yang Berbahagia -->
+    <section class="happy-section" id="happy">
+      <div class="container">
+        <div class="happy-card" data-animate="zoom-in">
+          <p class="happy-label">Kami yang Berbahagia</p>
+          <h3 class="happy-name">Bpk. Salman Fajri, S.Pd</h3>
+          <p class="happy-amp">&</p>
+          <h3 class="happy-name">Ibu Mellawaty Utami, S.Pd</h3>
+          <p class="happy-note">Beserta Keluarga Besar</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p class="footer-quote" data-animate="fade-up">"Ya Tuhan kami, anugerahkanlah kepada kami pasangan kami dan keturunan kami sebagai penyejuk hati kami, dan jadikanlah kami pemimpin bagi orang-orang yang bertakwa.” (QS. Al-Furqan: 74)</p>
+        <p class="footer-quote" data-animate="fade-up">"Ya Tuhan kami, anugerahkanlah kepada kami pasangan kami dan keturunan kami sebagai penyejuk hati kami, dan jadikanlah kami pemimpin bagi orang-orang yang bertakwa." (QS. Al-Furqan: 74)</p>
         <p class="footer-thanks" data-animate="fade-up">Terima kasih atas doa dan ucapan Anda</p>
         <p class="footer-couple" data-animate="zoom-in">M. Raffa Al-Fajri</p>
         <p class="footer-copyright">&copy; 2026. All Copyright reserved.</p>
@@ -123,13 +122,14 @@
       </div>
     </footer>
   </main>
-  
+
+  <!-- ===== AUDIO & TOMBOL ===== -->
   <audio id="backsound" loop preload="auto">
     <source src="music/wedding-song.mp3" type="audio/mpeg">
     Browser Anda tidak mendukung tag audio.
   </audio>
-
   <button id="music-toggle" class="music-btn">🔈</button>
+
   <script src="script.js"></script>
 </body>
 </html>

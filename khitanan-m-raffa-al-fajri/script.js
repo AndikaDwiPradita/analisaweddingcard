@@ -1,9 +1,8 @@
-// Elemen audio dan tombol
+// ===== AUDIO BACKSOUND =====
 const audio = document.getElementById('backsound');
 const musicToggle = document.getElementById('music-toggle');
 let isPlaying = false;
 
-// Fungsi untuk memulai musik
 function playMusic() {
   if (audio) {
     audio.play()
@@ -19,7 +18,6 @@ function playMusic() {
   }
 }
 
-// Tombol toggle play/pause
 musicToggle.addEventListener('click', function() {
   if (isPlaying) {
     audio.pause();
@@ -35,9 +33,9 @@ musicToggle.addEventListener('click', function() {
   }
 });
 
-// Countdown
+// ===== COUNTDOWN =====
 function updateCountdown() {
-  const eventDate = new Date('March 29, 2026 08:00:00').getTime();
+  const eventDate = new Date('November 4, 2026 08:00:00').getTime();
   const now = new Date().getTime();
   const distance = eventDate - now;
 
@@ -65,12 +63,11 @@ if (document.getElementById('days')) {
   updateCountdown();
 }
 
-// ===== ANIMASI SCROLL TANPA GETER (SETIAP KALI MASUK) =====
+// ===== ANIMASI SCROLL =====
 function initScrollAnimation() {
   const animatedElements = document.querySelectorAll('[data-animate]');
   if (animatedElements.length === 0) return;
 
-  // Atur gaya awal untuk semua elemen
   animatedElements.forEach(el => {
     const type = el.dataset.animate;
     setInitialStyle(el, type);
@@ -80,55 +77,49 @@ function initScrollAnimation() {
     entries.forEach(entry => {
       const el = entry.target;
       const type = el.dataset.animate;
-      
+
       if (entry.isIntersecting) {
-        // Elemen masuk: beri transisi dan tampilkan
         const delay = el.dataset.delay ? parseInt(el.dataset.delay) : 0;
         el.style.transition = `opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) ${delay}ms, transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) ${delay}ms`;
         el.style.opacity = '1';
         el.style.transform = 'none';
       } else {
-        // Elemen keluar: langsung kembalikan ke gaya awal tanpa transisi
         el.style.transition = 'none';
         setInitialStyle(el, type);
-        // Paksa reflow agar perubahan langsung diterapkan (opsional)
         void el.offsetHeight;
       }
     });
-  }, { 
+  }, {
     threshold: 0.15,
-    rootMargin: '0px 0px -10px 0px' // sedikit negative agar tidak terlalu sensitif
+    rootMargin: '0px 0px -10px 0px'
   });
 
   animatedElements.forEach(el => observer.observe(el));
 }
 
-// Fungsi untuk mengatur gaya awal
 function setInitialStyle(el, type) {
   el.style.opacity = '0';
   switch (type) {
-    case 'fade-up':    el.style.transform = 'translateY(30px)'; break;
-    case 'fade-down':  el.style.transform = 'translateY(-30px)'; break;
-    case 'fade-left':  el.style.transform = 'translateX(-30px)'; break;
-    case 'fade-right': el.style.transform = 'translateX(30px)'; break;
-    case 'zoom-in':    el.style.transform = 'scale(0.9)'; break;
-    case 'zoom-out':   el.style.transform = 'scale(1.1)'; break;
-    case 'slide-up':   el.style.transform = 'translateY(80%)'; break;
-    case 'slide-down': el.style.transform = 'translateY(-80%)'; break;
-    case 'slide-left': el.style.transform = 'translateX(-80%)'; break;
-    case 'slide-right':el.style.transform = 'translateX(80%)'; break;
-    case 'flip-left':  el.style.transform = 'perspective(400px) rotateY(70deg)'; break;
-    case 'flip-right': el.style.transform = 'perspective(400px) rotateY(-70deg)'; break;
-    default:           el.style.transform = 'translateY(20px)'; break;
+    case 'fade-up':     el.style.transform = 'translateY(30px)'; break;
+    case 'fade-down':   el.style.transform = 'translateY(-30px)'; break;
+    case 'fade-left':   el.style.transform = 'translateX(-30px)'; break;
+    case 'fade-right':  el.style.transform = 'translateX(30px)'; break;
+    case 'zoom-in':     el.style.transform = 'scale(0.9)'; break;
+    case 'zoom-out':    el.style.transform = 'scale(1.1)'; break;
+    case 'slide-up':    el.style.transform = 'translateY(80%)'; break;
+    case 'slide-down':  el.style.transform = 'translateY(-80%)'; break;
+    case 'slide-left':  el.style.transform = 'translateX(-80%)'; break;
+    case 'slide-right': el.style.transform = 'translateX(80%)'; break;
+    case 'flip-left':   el.style.transform = 'perspective(400px) rotateY(70deg)'; break;
+    case 'flip-right':  el.style.transform = 'perspective(400px) rotateY(-70deg)'; break;
+    default:            el.style.transform = 'translateY(20px)'; break;
   }
 }
 
-// Cover: klik buka undangan
+// ===== COVER: BUKA UNDANGAN =====
 document.getElementById('open-invitation').addEventListener('click', function() {
   document.getElementById('cover').style.display = 'none';
   document.getElementById('main-content').style.display = 'block';
   playMusic();
-  
-  // Mulai animasi setelah konten muncul
   setTimeout(initScrollAnimation, 500);
 });
