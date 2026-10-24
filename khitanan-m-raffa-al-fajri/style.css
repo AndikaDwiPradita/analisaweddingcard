@@ -144,7 +144,7 @@ body::before {
 .cpl-img {
   width: 100%;
   border: 2px solid #8b4513;
-  border-radius: 100px 100px 0 0;
+  border-radius: 100px;
 }
 
 /* Tombol kontrol musik di pojok kanan bawah */
