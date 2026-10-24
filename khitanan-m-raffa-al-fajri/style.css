@@ -5,13 +5,36 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+  /* Area luar undangan di layar besar diberi warna gelap agar tampilan HP lebih menonjol */
+  background-color: #2c2c2c; 
+}
+
 body {
   width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  background-color: transparent; /* Transparan agar gambar dari body::before terlihat */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  overflow-x: hidden; 
+}
+
+/* Trik memanggil background agar max 600px dan tetap diam saat discroll */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
   height: 100vh;
   background: url('images/welcome.png');
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  z-index: -1; 
 }
 
 #main-content {
@@ -128,7 +151,8 @@ body {
 .music-btn {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 50%;
+  margin-left: 230px; 
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
@@ -151,6 +175,15 @@ body {
 
 .music-btn.playing {
   /* bisa ubah ikon atau warna */
+}
+
+/* Memastikan tombol musik tidak keluar layar di HP */
+@media (max-width: 600px) {
+  .music-btn {
+    left: auto;
+    right: 20px;
+    margin-left: 0;
+  }
 }
 
 .CKM {
