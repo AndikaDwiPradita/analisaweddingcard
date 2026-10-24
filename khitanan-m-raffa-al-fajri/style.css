@@ -433,6 +433,15 @@ body::before {
   line-height: 1.4;
 }
 
+.happy-job {
+  font-size: 0.95rem;
+  color: #8b4513;
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 0;
+  letter-spacing: 0.5px;
+}
+
 .happy-amp {
   font-size: 2rem;
   color: #d4b483;
@@ -536,6 +545,9 @@ body::before {
   .happy-card { padding: 35px 20px; }
   .happy-label { font-size: 1rem; letter-spacing: 1px; }
   .happy-name { font-size: 1.3rem; }
+  .happy-job {
+  font-size: 0.85rem;
+  }
   .happy-amp { font-size: 1.6rem; }
   .happy-note { font-size: 0.9rem; }
 
