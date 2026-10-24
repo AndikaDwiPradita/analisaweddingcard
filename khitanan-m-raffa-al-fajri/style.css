@@ -65,6 +65,7 @@ body::before {
   padding-top: 50%;
   text-align: center;
   font-size: 2.5rem;
+  margin-bottom: 50px;
 }
 
 .CNT {
@@ -128,12 +129,13 @@ body::before {
 
 /* Ukuran font spesifik (opsional) */
 .WT-1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 .WT-2 {
   font-size: 1.8rem;
 }
 .CNT {
+  margin-top: 5px;
   font-size: 2.2rem;
 }
 .date {
@@ -144,7 +146,7 @@ body::before {
 .cpl-img {
   width: 100%;
   border: 2px solid #8b4513;
-  border-radius: 100px;
+  border-radius: 100px 100px 0 0;
 }
 
 /* Tombol kontrol musik di pojok kanan bawah */
