@@ -245,6 +245,92 @@ body::before {
   line-height: 1.6;
 }
 
+/* ===== SECTION DETAIL ACARA ===== */
+.detail-acara-section {
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-acara-section .container {
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.detail-acara-card {
+  background: #f8f3e9; /* Warna krem senada dengan tema */
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 2px solid #d4b483; /* Border emas */
+  margin-bottom: 30px;
+}
+
+.acara-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.acara-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.acara-label {
+  font-size: 1rem;
+  color: #8b4513; /* Coklat gelap */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.acara-value {
+  font-size: 1.3rem;
+  color: #000;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.acara-value.alamat {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.acara-divider {
+  height: 1px;
+  background: #d4b483;
+  width: 50%;
+  margin: 15px auto;
+  opacity: 0.5;
+}
+
+.acara-penutup {
+  font-size: 1rem;
+  font-style: italic;
+  color: #555;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+  .detail-acara-section { padding: 40px 15px; }
+  .detail-acara-card { padding: 30px 20px; }
+  .acara-icon { font-size: 2.5rem; }
+  .acara-label { font-size: 0.9rem; }
+  .acara-value { font-size: 1.1rem; }
+  .acara-value.alamat { font-size: 1rem; }
+  .acara-penutup { font-size: 0.9rem; }
+}
+
 /* ===== SECTION COUNTDOWN ===== */
 .countdown-section {
   padding: 60px 20px;
@@ -403,26 +489,46 @@ body::before {
 }
 
 .happy-section .container {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
   width: 100%;
 }
 
 .happy-card {
-  background: white;
+  background: #f8f3e9;
   border-radius: 20px;
   padding: 50px 30px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  border: 2px solid #d4b483;
+  border-left: 5px solid #d4b483;
+  border-right: 5px solid #d4b483;
+  position: relative;
+}
+
+/* Ornamen kecil di atas & bawah card */
+.happy-card::before,
+.happy-card::after {
+  content: "❦";
+  color: #d4b483;
+  font-size: 1.8rem;
+  display: block;
+  line-height: 1;
+}
+
+.happy-card::before {
+  margin-bottom: 20px;
+}
+
+.happy-card::after {
+  margin-top: 20px;
 }
 
 .happy-label {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-style: italic;
   color: #8b4513;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-bottom: 25px;
-  text-transform: uppercase;
+  line-height: 1.6;
 }
 
 .happy-name {
@@ -444,7 +550,7 @@ body::before {
 
 .happy-amp {
   font-size: 2rem;
-  color: #d4b483;
+  color: #8b4513;
   font-style: italic;
   margin: 15px 0;
   font-weight: 500;
@@ -452,9 +558,22 @@ body::before {
 
 .happy-note {
   font-size: 1rem;
-  color: #666;
+  color: #8b4513;
   font-style: italic;
   margin-top: 20px;
+  font-weight: 500;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .happy-section { padding: 40px 15px; min-height: auto; }
+  .happy-card { padding: 35px 20px; }
+  .happy-label { font-size: 0.9rem; }
+  .happy-name { font-size: 1.3rem; }
+  .happy-amp { font-size: 1.6rem; }
+  .happy-note { font-size: 0.9rem; }
+  .happy-card::before,
+  .happy-card::after { font-size: 1.5rem; }
 }
 
 /* ===== FOOTER ===== */
@@ -545,9 +664,6 @@ body::before {
   .happy-card { padding: 35px 20px; }
   .happy-label { font-size: 1rem; letter-spacing: 1px; }
   .happy-name { font-size: 1.3rem; }
-  .happy-job {
-  font-size: 0.85rem;
-  }
   .happy-amp { font-size: 1.6rem; }
   .happy-note { font-size: 0.9rem; }
 
