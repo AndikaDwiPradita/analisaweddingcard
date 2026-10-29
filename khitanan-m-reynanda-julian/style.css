@@ -1,0 +1,675 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  background-color: #2c2c2c;
+}
+
+body {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  background-color: transparent;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+  background: url('images/welcome.png');
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+#main-content { display: none; }
+.hidden { display: none; }
+
+/* ===== COVER ===== */
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.WCover {
+  width: 100%;
+  height: 100vh;
+  background: url('images/cover.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.CT {
+  padding-top: 50%;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.CNT {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.yth {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.OG {
+  text-align: center;
+  border: 5px solid black;
+  border-radius: 50px;
+  margin: 10px 70px 0;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.OG:hover {
+  background: rgba(135, 206, 235, 0.2);
+}
+
+.instruksi {
+  text-align: center;
+}
+
+/* ===== WELCOME ===== */
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: url('images/welcome.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.WContain {
+  position: absolute;
+  background-color: rgba(135, 206, 235, 0.3);
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: black;
+  font-size: 2em;
+  padding: 40px 60px;
+  text-align: center;
+  margin: 0 50px;
+}
+
+.WT-1 { font-size: 2rem; }
+.WT-2 { font-size: 1.8rem; }
+
+.WContain .CNT {
+  margin-top: 5px;
+  font-size: 2.2rem;
+}
+
+.date {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.cpl-img {
+  width: 50%;
+  border: 2px solid skyblue;
+  border-radius: 100%;
+}
+
+/* ===== TOMBOL MUSIK ===== */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  margin-left: 230px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+.music-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 600px) {
+  .music-btn {
+    left: auto;
+    right: 20px;
+    margin-left: 0;
+  }
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: black;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: black;
+  margin: 15px auto 0;
+}
+
+/* ===== SECTION PROFIL ANAK ===== */
+.couple-section {
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.couple-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.couple-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.couple-card {
+  flex: 1 1 300px;
+  max-width: 350px;
+  background: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.couple-card:hover {
+  transform: translateY(-5px);
+}
+
+.couple-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid black;
+  margin-bottom: 20px;
+}
+
+.couple-name {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.couple-desc {
+  font-size: 1.1rem;
+  color: black;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* ===== SECTION DETAIL ACARA ===== */
+.detail-acara-section {
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-acara-section .container {
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.detail-acara-card {
+  background: rgba(220, 235, 245, 0.9); /* biru muda */
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 2px solid skyblue; /* border biru */
+  margin-bottom: 30px;
+}
+
+.acara-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.acara-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.acara-label {
+  font-size: 1rem;
+  color: #1976d2; /* biru tua */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.acara-value {
+  font-size: 1.3rem;
+  color: #000;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.acara-value.alamat {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.acara-divider {
+  height: 1px;
+  background: skyblue;
+  width: 50%;
+  margin: 15px auto;
+  opacity: 0.5;
+}
+
+.acara-penutup {
+  font-size: 1rem;
+  font-style: italic;
+  color: #555;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+  .detail-acara-section { padding: 40px 15px; }
+  .detail-acara-card { padding: 30px 20px; }
+  .acara-icon { font-size: 2.5rem; }
+  .acara-label { font-size: 0.9rem; }
+  .acara-value { font-size: 1.1rem; }
+  .acara-value.alamat { font-size: 1rem; }
+  .acara-penutup { font-size: 0.9rem; }
+}
+
+/* ===== SECTION COUNTDOWN ===== */
+.countdown-section {
+  padding: 60px 20px;
+  background: skyblue;
+  text-align: center;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-section .container {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.countdown-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0 30px;
+}
+
+.countdown-item {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  min-width: 120px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid skyblue;
+}
+
+.countdown-number {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: black;
+  line-height: 1.2;
+}
+
+.countdown-label {
+  display: block;
+  font-size: 1.2rem;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.countdown-date {
+  font-size: 1.3rem;
+  color: black;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* ===== SECTION TURUT MENGUNDANG ===== */
+.guest-section {
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guest-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.guest-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.guest-category {
+  background-color: rgba(220, 235, 245, 0.9);
+  border-radius: 12px;
+  padding: 25px;
+  border-left: 5px solid skyblue;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guest-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(135, 206, 235, 0.3);
+}
+
+.category-title {
+  color: #1976d2;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #b3d9f2;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.category-title::before {
+  content: "•";
+  color: skyblue;
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.guest-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.guest-item {
+  padding: 12px 15px 12px 35px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #b3d9f2;
+  color: #555;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: left;
+}
+
+.guest-item::before {
+  content: "✓";
+  color: skyblue;
+  font-weight: bold;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.guest-item:hover {
+  background-color: #e8f4fc;
+  border-color: skyblue;
+  transform: translateX(5px);
+  color: #333;
+}
+
+/* ===== SECTION KAMI YANG BERBAHAGIA ===== */
+.happy-section {
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.happy-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.happy-card {
+  background: rgba(220, 235, 245, 0.9);
+  border-radius: 20px;
+  padding: 50px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid skyblue;
+  border-right: 5px solid skyblue;
+  position: relative;
+}
+
+/* Ornamen kecil di atas & bawah card */
+.happy-card::before,
+.happy-card::after {
+  content: "❦";
+  color: skyblue;
+  font-size: 1.8rem;
+  display: block;
+  line-height: 1;
+}
+
+.happy-card::before {
+  margin-bottom: 20px;
+}
+
+.happy-card::after {
+  margin-top: 20px;
+}
+
+.happy-label {
+  font-size: 1rem;
+  font-style: italic;
+  color: #1976d2;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.happy-name {
+  font-size: 1.6rem;
+  color: black;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.happy-job {
+  font-size: 0.95rem;
+  color: #1976d2;
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 0;
+  letter-spacing: 0.5px;
+}
+
+.happy-amp {
+  font-size: 2rem;
+  color: #1976d2;
+  font-style: italic;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.happy-note {
+  font-size: 1rem;
+  color: #1976d2;
+  font-style: italic;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .happy-section { padding: 40px 15px; min-height: auto; }
+  .happy-card { padding: 35px 20px; }
+  .happy-label { font-size: 0.9rem; }
+  .happy-name { font-size: 1.3rem; }
+  .happy-amp { font-size: 1.6rem; }
+  .happy-note { font-size: 0.9rem; }
+  .happy-card::before,
+  .happy-card::after { font-size: 1.5rem; }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: skyblue;
+  color: black;
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+
+.footer .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: black;
+  padding: 0 15px;
+}
+
+.footer-thanks {
+  font-size: 1.3rem;
+  margin: 25px 0 15px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.footer-couple {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 20px 0 30px;
+  color: black;
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  color: black;
+  border-top: 1px solid black;
+  padding-top: 25px;
+  margin-top: 20px;
+}
+
+/* ===== RESPONSIF ===== */
+@media (max-width: 600px) {
+  .CT { font-size: 2rem; padding-top: 40%; }
+  .CNT { font-size: 1.5rem; margin-top: 30px; }
+  .yth { font-size: 1.2rem; margin-top: 30px; }
+  .OG { font-size: 1.5rem; margin: 10px 30px 0; border-width: 3px; }
+  .instruksi { font-size: 0.85rem; }
+
+  .WContain {
+    padding: 25px 20px;
+    margin: 0 20px;
+    font-size: 1.4rem;
+  }
+  .WT-1 { font-size: 1.5rem; }
+  .WT-2 { font-size: 1.4rem; }
+  .WContain .CNT { font-size: 1.7rem; }
+  .date { font-size: 1rem; }
+
+  .section-title { font-size: 1.8rem; margin-bottom: 30px; }
+  .section-title::after { width: 60px; }
+
+  .couple-section,
+  .guest-section { padding: 40px 15px; min-height: auto; }
+
+  .couple-card { padding: 20px 15px; }
+  .couple-name { font-size: 1.5rem; }
+  .couple-desc { font-size: 0.95rem; }
+  .couple-photo { width: 120px; height: 120px; }
+
+  .countdown-wrapper { gap: 12px; margin: 25px 0; }
+  .countdown-item { min-width: 65px; padding: 12px; }
+  .countdown-number { font-size: 2rem; }
+  .countdown-label { font-size: 0.8rem; }
+  .countdown-date { font-size: 1rem; }
+
+  .guest-list { grid-template-columns: 1fr; }
+  .guest-item { font-size: 0.9rem; padding: 10px 12px 10px 30px; }
+  .category-title { font-size: 1.2rem; }
+  .guest-category { padding: 18px 15px; }
+
+  .happy-section { padding: 40px 15px; min-height: auto; }
+  .happy-card { padding: 35px 20px; }
+  .happy-label { font-size: 1rem; letter-spacing: 1px; }
+  .happy-name { font-size: 1.3rem; }
+  .happy-amp { font-size: 1.6rem; }
+  .happy-note { font-size: 0.9rem; }
+
+  .footer { padding: 40px 15px 25px; }
+  .footer-quote { font-size: 0.95rem; }
+  .footer-thanks { font-size: 1.1rem; }
+  .footer-couple { font-size: 1.6rem; }
+  .footer-copyright { font-size: 0.8rem; }
+}
