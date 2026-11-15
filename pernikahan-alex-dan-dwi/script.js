@@ -35,7 +35,7 @@ musicToggle.addEventListener('click', function() {
 
 // ===== COUNTDOWN =====
 function updateCountdown() {
-  const eventDate = new Date('November 7, 2026 08:00:00').getTime();
+  const eventDate = new Date('December 19, 2026 07:00:00').getTime();
   const now = new Date().getTime();
   const distance = eventDate - now;
 
