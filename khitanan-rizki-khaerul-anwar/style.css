@@ -492,6 +492,102 @@ body::before {
   color: #333;
 }
 
+/* Gift Section */
+.gift-section {
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gift-subtitle {
+  font-size: 1.5 rem;
+  color: black;
+  margin: 40px 0 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.gift-subtitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 10px auto 0;
+}
+
+.gift-card {
+  width: 90%;
+  background: #48b9ff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.gift-card:hover {
+  transform: translateY(-5px);
+}
+
+.gift-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.bank-logo{
+  width: 30%;
+}
+
+.gift-name {
+  text-align: left;
+  margin-left: 20px;
+  padding: 10px 0px;
+  font-size: 1.8rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.gift-account {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  padding: 10px 0px;
+}
+
+.gift-holder {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.copy-btn {
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.copy-btn:hover {
+  background: #9e5a63;
+}
+
+.copy-btn.copied {
+  background: #28a745;
+}
+
+
 /* ===== SECTION KAMI YANG BERBAHAGIA ===== */
 .happy-section {
   padding: 60px 20px;
